@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy unsafe-inline" content="default-src 'self'; script-src 'self'">
+  <link rel="stylesheet" href=./assets/style/index.css>
+  <title>LambdaDrop Panel - Accueil</title>
+</head>
+
+<div id="overlay" class="overlay">
+  <div id="popup" class="popup">
+    <h1>Que souhaitez-vous faire ?</h1>
+    <center><button class="pbtn" onClick="JavaScript:launch(event)">Lancer une partie</button>
+    <button class="pbtn" onClick="JavaScript:edit(event)">Editer une partie</button></center>
+  </div>
+</div>
+
+<div id="overlay2" class="overlay">
+  <div id="popup" class="popup">
+    <h1>Accès à la gestion</h1>
+    <center><button class="pbtn" onClick="JavaScript:mj(event)">Maître du jeu</button>
+    <button class="pbtn" onClick="JavaScript:st(event)">Streamer</button></center>
+  </div>
+</div>
+
+<body id="app">
+  <center><img src="./assets/img/logo.png" alt="logo" width="125"></center>
+  <div id="content">
+    <center><button id="cp" onclick="window.location.href='./pages/pc.html'">
+      <img width="28 px" style="filter: invert(1); margin-right: 5px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAADjElEQVRoge3ZT4hVZRjH8U96G5GmyJRIR1oUMYt2OrYpoj9gDJMQIWHQv73rEoPMRX8WtUhS2hSJQ7QsCioX2dif1TQtoiB1ijTRzFolaDBoi/dc7nvfOed6z7mvl6T5woEH3vd5nt9zznvO++ewxBL/b67JFGcZ7sID2IhxrMNo0X4Op/AT5nAIs7iYKX9j1uNVnMSlmtdveAVjQ1eN1XgL//Qpttd1Aftw07DEb8OfJUJO4W08iQ1CkdcW1xphaD2Fd3C6xP8sHruSwlvCXU8Tf4EpLK8Z62HMlMTbW7RnZSU+ThIdxeYMsSdxLIn9UZEzCy2Lxe/HdbkSCF+rAxYXkeVJpMPmhRxBK9iV5Hpz0IDbDE98m7SIrU0Drdb9tdmfQ12fTEd5/8CqJkHioXNU/TE/jhP4FXfU9B3FvAGG0nrdk9RDdQPg+ch/ZwP/ycj/grA0WcSyCuftGCnsGRxsIGAkslc08P8UX0b+28s6lRWwXJhN27zeIHkuXovsJ5ToLStgk84C67Rmdz8Xn+FMYd+KibRDWQEPRvYnWMivq28WhKHU5v60Q1kBGyL7cG5FDZiJ7L6ewHhk/5hdTn1iDeNpY9laY21kH+8R+HY8UhED7k7sHRX9FvABfqlojzWsrejTRfz9H+nRL55oBr3me+RZoXs+6KJqHrhqKHv853S2d9fjrwrfzXi86FPGPTrD6Bt8XdHvb7zfQ+MNSd/L8oPOI9vYj0MFu6M4uweIsymK833aWDaEjkT2nQMkzkWs4UjaWFbAXGTfm11Ofe6L7Nm0sayAzyN7yhXYYNegJaxK2xxKO5QVMCscVMEtmi2lczGJmwv7BL5LO5QVcFHYEbV5Nr+uvnkusqfVOIocEyaN9ts/2bt7KTsi/6pZuBdTkf95FRuaXuyLAhzTOajtl9uEGXa+sOswip+j/Htq+iNs6s9GQQ40CdKQ96K8ZzTc1BPOKuM1y64c6i7Di0nORwcNuNfwikjFv5EjaEs45osDT6v/TvRiVPewuYQP1Tsw7slKi4uY1+zrlDKl+4Vti892uNumJRwwpWv5w8JReZ0Zu4Ut+Kok3h4Z73wZW4UvQ5r4d7yLp4W96xphQzRS2BN4RjiirPIf+IXtl1XC04gnu6bXeeGu3zgs8THr8LKwTqkr/Dhe0uc+t4qcv1kndP9mHdP9m/WkcEj8rbCqnPMf+M26xBJXO/8CapBOfWBnfM8AAAAASUVORK5CYII="/>
+        Créer une partie
+      </button></center>
+    <div id="fp">
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <button class="dbt" id="lpt">
+                <img class="btimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAACyklEQVRoge3Zy6tOURjH8c85LjFwnRxFiFIyoEwkl1ByyH+giIFEmSu3/4ABSRQpppjIvUxMXHIbKAOOS85UR5TLMdh21t5n7/2e7T1rv9T7qzVZa6/n+T5rP2vt510vXXXV1X+tnk4DYB22YD36MAVDeIF7uIDXHaOr0Frcx3CL9gOHO8RYqv34rjV8GMT8jpDm1IszsnCfcRwbJCk0GXOxA6+C5w52gDejXpyVhb+BWRVz9gTP3owNWKUi+LMY32Le0uD5dzEBq1QEf+Z3fyv1BXOGYgFWqR14mBfMG4wBWKXRwG+RpMZb9BfY6A/mPogJm9doV/5tMD5QYOdUMH4sFmxeddKmKoDZkrxPx1dF4s2obs73S4IYwKagfxyuBTYeRuLNqN0NW2bnJ1a2A7Ubj/E1B9eq1d2wRfDDONQO/MWa0OFHqu6GLXuDf10x7x5D+FYBlH2p66ZfRo8CYycxtU2nZRs2Cjx8CQxObxO+TNHg4WNgdHUEp1Hh4XxgeBBbx9BpdHhYiE85J8/HwGkj8KlW4H3O2X8Dn2oGbo2B047Ap3oaOD33F047Ch/+qHiDSTXnF8H/0BA8SRmbOr5Sc24RfNoa0+LA6YDk2mM0qoJvLIAerME39fZAWc43GkAfbitevao6v2rDNhbARDxR/vrLTpFWp01jAewMHH3DCezFnRzEOX/2xGTZ8qMoyMYCuB44OhL09+JuDmQAV2Xr/WE8M/INNRLAOMmFa+poXm58Xw6kqm0N5k0L+r/Ew2eJ7OrmdTIYD0+nYclv57DsGJScYjNwOuiPekm1LXAUfrjm4mgOehUWYTnm/H5upvICMG27YgZwQHalLktKiDxE1XX3CiNL8bRdEPmvrc0ljvOp0tfCzgLJqfRBkvMPJCsf/X+5HlwyEnpIclu2HRNiQ4xWZavRg41YJrmMeoyXkiqyq666+of0C+qry47/2b9oAAAAAElFTkSuQmCC"/>
+                Lancer une Partie
+              </button>
+            </td>
+            <td>
+              <button class="dbt" onclick="JavaScript:o2()">
+                <img class="btimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAABeElEQVRoge2YUU7CMByHPzdjvIWgd8CbCPEqwKOeZ3IM8BoS9FkeSEbmw7qsXTbpuo5O+X9JkyXlv36/ha5rQRCEi+YVOACZYzsAL10ErroUK4EbD/e4dS3uGiDrWF/g7HHtScBFwkv4yMdNQiIBQiMBQnMqQATMgBWwBVLMhUin7SLWVJuqsd6AqYVjIyPg3UHMd9sol9byuwHIF23XJkSE+eS/gTkw5jxzJgbugQWw1zzWtuPPMOUnvWjaMcEM8WRTtNIK5r2p2bOk9ElsCrZawbg/L2seKH0+bAr0V2Xcn5c1MeYr1qDuCzI70R+CRqd/vxIPHgkQGgkQGgkQGgkQGgkQmroAR+16KF+jBcdqZ12AL+36zrtOe/S98Ge1sy7ARrt+9q7THt1h0/grjSnlBmJP2D3xIw574og8qR5iQb61O8eciNVYSxxPJWCY50Kt5+NIpQ4tv8bhZK4gIp8TCfmJQPVstI+WqrES8v/8n1+rBEH4hR9hmhAxfkKFkwAAAABJRU5ErkJggg=="/>
+                Gérer la partie
+              </button>
+            </td>
+            <td>
+              <button class="dbt" id="ept">
+                <img class="btimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAABv0lEQVRoge2YvUoDQRRGj1srMVHxIWxT+hIawdgLAV/AJgR/Gt/ASkiew9poodZqo2UICFE7idFiJuTuZnZ2V9nNRObANDt34dzZb4ZhwePxeP7IGnAK3AMfetwBJ3rOabaBd+A7ZrzpGidpACPi5cdjhINNROUfgBqwrkdNP5NfYnUmpgai8jfAsqGuDDyKuuOiBG2Y5EuW+i1Re5u7XQKmzLeBwPLOoqgd5C1ow7ZhL4hvYgkHGjDFpkO6JmrMOEJxmQ9Q0rYmloEnMX9UmLUmacPamijpehmfQo/RtKeNqYkOYfkR6jQqjH3gi3B2y5b6BeCccBNS/iBP2ShZz/kxAepIjco38tE0k3XlJdHMF77yXh4vnx0vj5fPjpfHy2dnh99dD8AsX+j1IABemFN5gKoQ6DNn8gAtIdFO+c7MMy+5FiK7Keqdkq8AQy0yBFYS6p2SB9gTMlcJtc7JQ/jXR9NS58yGlQRAj4lUNTJfAeqoJvs4Jg/Tx2cAbACHwCXwKeadis2YJhOxV8JfwzSeUX/RnKGLXXiIug+dAZvYf9DOhAHT0j1U5uuoPeA0LVR0uqg4VXFwlT0ezz/gB1x4S3pELL8zAAAAAElFTkSuQmCC"/>
+                Editer une partie 
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p id="lft">Fait avec le ω par Le_Mocha</p>
+  </div>
+  <!-- You can also require other files to run in this process -->
+  <script src="./assets/js/renderer.js"></script>
+  <script src="./assets/js/index.js"></script>
+</body>
+
+</html>

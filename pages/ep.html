@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href=../assets/style/pc.css>
+    <title>LambdaDrop Panel - Edition de Partie</title>
+  </head>
+  <body>
+
+    <div id="overlay" class="overlay">
+      <div id="popup" class="popup">
+        <div class="loader" id="spinner"></div>
+        <h1 id="loadingtitle">Edition de la partie en cours...</h1>
+      </div>
+    </div>
+
+    <center><a href="../index.html"><img src="../assets/img/logo.png" alt="logo" width="125"></a></center>
+    <form>
+
+      <div>
+          <table width="100%">
+            <thead>
+                <tr>
+                    <th colspan="2"><h1>Équipe 1 - Question 1 :</h1></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                  <td class="q">
+                    <h2>Thème 1 :</h2>
+                    <h2><input type="text" class="qtitle" required id="q1th1"  size="30" placeholder="Thème" minlength="5" maxlength="26"></h2>
+                    <input type="text" class="qtitle" required id="tq1t1"  size="45" placeholder="Titre de la question" minlength="5" maxlength="42">
+                    <label>Réponse 1 :</label>
+                    <input type="text" class="qrep" required id="r1q1t1"  size="30" placeholder="42 ?" minlength="5" maxlength="26">
+                    <label>Réponse 2 :</label>
+                    <input type="text" class="qrep" required id="r2q1t1"  size="30" placeholder="La réponse A" minlength="5" maxlength="26">
+                    <label>Réponse 3 :</label>
+                    <input type="text" class="qrep" required id="r3q1t1"  size="30" placeholder="Never Gonna" minlength="5" maxlength="26">
+                    <label>Réponse 4 :</label>
+                    <input type="text" class="qrep" required id="r4q1t1"  size="30" placeholder="Give You Up" minlength="5" maxlength="26">
+                    <label for="rep">Bonne réponse :</label>
+                    <select required id="q1th1rep">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                  </select>
+                  </td>
+
+                  <td class="q">
+                    <h2>Thème 2 :</h2>
+                    <h2><input type="text" class="qtitle" required id="q1th2"  size="30" placeholder="Thème" minlength="5" maxlength="26"></h2>
+                    <input type="text" class="qtitle" required id="tq1t2"  size="45" placeholder="Titre de la question" minlength="5" maxlength="42">
+                    <label>Réponse 1 :</label>
+                    <input type="text" class="qrep" required id="r1q1t2"  size="30" placeholder="42 ?" minlength="5" maxlength="26">
+                    <label>Réponse 2 :</label>
+                    <input type="text" class="qrep" required id="r2q1t2"  size="30" placeholder="La réponse A" minlength="5" maxlength="26">
+                    <label>Réponse 3 :</label>
+                    <input type="text" class="qrep" required id="r3q1t2"  size="30" placeholder="Never Gonna" minlength="5" maxlength="26">
+                    <label>Réponse 4 :</label>
+                    <input type="text" class="qrep" required id="r4q1t2"  size="30" placeholder="Give You Up" minlength="5" maxlength="26">
+                    <label for="rep">Bonne réponse :</label>
+                    <select required id="q1th2rep">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                  </td>
+                </tr>
+            </tbody>
+
+          </table>
+      </div>
+
+      <div>
+        <table width="100%">
+          <thead>
+              <tr>
+                  <th colspan="2"><h1>Équipe 1 - Question 2 :</h1></th>
+              </tr>
+          </thead>
+    
+          <tbody>
+              <tr>
+                <td class="q">
+                  <h2>Thème 1 :</h2>
+                  <h2><input type="text" class="qtitle" required id="q2th1"  size="30" placeholder="Thème" minlength="5" maxlength="26"></h2>
+                  <input type="text" class="qtitle" required id="tq2t1"  size="45" placeholder="Titre de la question" minlength="5" maxlength="42">
+                  <label>Réponse 1 :</label>
+                  <input type="text" class="qrep" required id="r1q2t1"  size="30" placeholder="42 ?" minlength="5" maxlength="26">
+                  <label>Réponse 2 :</label>
+                  <input type="text" class="qrep" required id="r2q2t1"  size="30" placeholder="La réponse A" minlength="5" maxlength="26">
+                  <label>Réponse 3 :</label>
+                  <input type="text" class="qrep" required id="r3q2t1"  size="30" placeholder="Never Gonna" minlength="5" maxlength="26">
+                  <label>Réponse 4 :</label>
+                  <input type="text" class="qrep" required id="r4q2t1"  size="30" placeholder="Give You Up" minlength="5" maxlength="26">
+                  <label for="rep">Bonne réponse :</label>
+                  <select required id="q2th1rep">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                </td>
+    
+                <td class="q">
+                  <h2>Thème 2 :</h2>
+                  <h2><input type="text" class="qtitle" required id="q2th2"  size="30" placeholder="Thème" minlength="5" maxlength="26"></h2>
+                  <input type="text" class="qtitle" required id="tq2t2"  size="45" placeholder="Titre de la question" minlength="5" maxlength="42">
+                  <label>Réponse 1 :</label>
+                  <input type="text" class="qrep" required id="r1q2t2"  size="30" placeholder="42 ?" minlength="5" maxlength="26">
+                  <label>Réponse 2 :</label>
+                  <input type="text" class="qrep" required id="r2q2t2"  size="30" placeholder="La réponse A" minlength="5" maxlength="26">
+                  <label>Réponse 3 :</label>
+                  <input type="text" class="qrep" required id="r3q2t2"  size="30" placeholder="Never Gonna" minlength="5" maxlength="26">
+                  <label>Réponse 4 :</label>
+                  <input type="text" class="qrep" required id="r4q2t2"  size="30" placeholder="Give You Up" minlength="5" maxlength="26">
+                  <label for="rep">Bonne réponse :</label>
+                  <select required id="q2th2rep">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                  </select>
+                </td>
+              </tr>
+          </tbody>
+    
+        </table>
+      </div>
+
+      <div>
+        <table width="100%">
+          <thead>
+              <tr>
+                  <th colspan="2"><h1> Équipe 1 - Question 3 :</h1></th>
+              </tr>
+          </thead>
+    
+          <tbody>
+              <tr>
+                <td class="q">
+                  <h2>Thème 1 :</h2>
+                  <h2><input type="text" class="qtitle" required id="q3th1"  size="30" placeholder="Thème" minlength="5" maxlength="26"></h2>
+                  <input type="text" class="qtitle" required id="tq3t1"  size="45" placeholder="Titre de la question" minlength="5" maxlength="42">
+                  <label>Réponse 1 :</label>
+                  <input type="text" class="qrep" required id="r1q3t1"  size="30" placeholder="42 ?" minlength="5" maxlength="26">
+                  <label>Réponse 2 :</label>
+                  <input type="text" class="qrep" required id="r2q3t1"  size="30" placeholder="La réponse A" minlength="5" maxlength="26">
+                  <label>Réponse 3 :</label>
+                  <input type="text" class="qrep" required id="r3q3t1"  size="30" placeholder="Never Gonna" minlength="5" maxlength="26">
+                  <label>Réponse 4 :</label>
+                  <input type="text" class="qrep" required id="r4q3t1"  size="30" placeholder="Give You Up" minlength="5" maxlength="26">
+                  <label for="rep">Bonne réponse :</label>
+                  <select required id="q3th1rep">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                </td>
+    
+                <td class="q">
+                  <h2>Thème 2 :</h2>
+                  <h2><input type="text" class="qtitle" required id="q3th2"  size="30" placeholder="Thème" minlength="5" maxlength="26"></h2>
+                  <input type="text" class="qtitle" required id="tq3t2"  size="45" placeholder="Titre de la question" minlength="5" maxlength="42">
+                  <label>Réponse 1 :</label>
+                  <input type="text" class="qrep" required id="r1q3t2"  size="30" placeholder="42 ?" minlength="5" maxlength="26">
+                  <label>Réponse 2 :</label>
+                  <input type="text" class="qrep" required id="r2q3t2"  size="30" placeholder="La réponse A" minlength="5" maxlength="26">
+                  <label>Réponse 3 :</label>
+                  <input type="text" class="qrep" required id="r3q3t2"  size="30" placeholder="Never Gonna" minlength="5" maxlength="26">
+                  <label>Réponse 4 :</label>
+                  <input type="text" class="qrep" required id="r4q3t2"  size="30" placeholder="Give You Up" minlength="5" maxlength="26">
+                  <label for="rep">Bonne réponse :</label>
+                  <select required id="q3th2rep">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                  </select>
+                </td>
+              </tr>
+          </tbody>
+    
+        </table>
+      </div>
+
+      <div>
+        <table width="100%">
+          <thead>
+              <tr>
+                  <th colspan="2"><h1>Équipe 1 - Question 4 :</h1></th>
+              </tr>
+          </thead>
+    
+          <tbody>
+              <tr>
+                <td class="q">
+                  <h2>Thème 1 :</h2>
+                  <h2><input type="text" class="qtitle" required id="q4th1"  size="30" placeholder="Thème" minlength="5" maxlength="26"></h2>
+                  <input type="text" class="qtitle" required id="tq4t1"  size="45" placeholder="Titre de la question" minlength="5" maxlength="42">
+                  <label>Réponse 1 :</label>
+                  <input type="text" class="qrep" required id="r1q4t1"  size="30" placeholder="42 ?" minlength="5" maxlength="26">
+                  <label>Réponse 2 :</label>
+                  <input type="text" class="qrep" required id="r2q4t1"  size="30" placeholder="La réponse A" minlength="5" maxlength="26">
+                  <label>Réponse 3 :</label>
+                  <input type="text" class="qrep" required id="r3q4t1"  size="30" placeholder="Never Gonna" minlength="5" maxlength="26">
+                  <label>Réponse 4 :</label>
+                  <input type="text" class="qrep" required id="r4q4t1"  size="30" placeholder="Give You Up" minlength="5" maxlength="26">
+                  <label for="rep">Bonne réponse :</label>
+                  <select required id="q4th1rep">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                </td>
+    
+                <td class="q">
+                  <h2>Thème 2 :</h2>
+                  <h2><input type="text" class="qtitle" required id="q4th2"  size="30" placeholder="Thème" minlength="5" maxlength="26"></h2>
+                  <input type="text" class="qtitle" required id="tq4t2"  size="45" placeholder="Titre de la question" minlength="5" maxlength="42">
+                  <label>Réponse 1 :</label>
+                  <input type="text" class="qrep" required id="r1q4t2"  size="30" placeholder="42 ?" minlength="5" maxlength="26">
+                  <label>Réponse 2 :</label>
+                  <input type="text" class="qrep" required id="r2q4t2"  size="30" placeholder="La réponse A" minlength="5" maxlength="26">
+                  <label>Réponse 3 :</label>
+                  <input type="text" class="qrep" required id="r3q4t2"  size="30" placeholder="Never Gonna" minlength="5" maxlength="26">
+                  <label>Réponse 4 :</label>
+                  <input type="text" class="qrep" required id="r4q4t2"  size="30" placeholder="Give You Up" minlength="5" maxlength="26">
+                  <label for="rep">Bonne réponse :</label>
+                  <select required id="q4th2rep">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                  </select>
+                </td>
+              </tr>
+          </tbody>
+    
+        </table>
+      </div>
+
+      <div>
+        <table width="100%">
+          <thead>
+              <tr>
+                  <th colspan="2"><h1>Équipe 2 - Question 1 :</h1></th>
+              </tr>
+          </thead>
+    
+          <tbody>
+              <tr>
+                <td class="q">
+                  <h2>Thème 1 :</h2>
+                  <h2><input type="text" class="qtitle" required id="e2q1th1"  size="30" placeholder="Thème" minlength="5" maxlength="26"></h2>
+                  <input type="text" class="qtitle" required id="e2tq1t1"  size="45" placeholder="Titre de la question" minlength="5" maxlength="42">
+                  <label>Réponse 1 :</label>
+                  <input type="text" class="qrep" required id="e2r1q1t1"  size="30" placeholder="42 ?" minlength="5" maxlength="26">
+                  <label>Réponse 2 :</label>
+                  <input type="text" class="qrep" required id="e2r2q1t1"  size="30" placeholder="La réponse A" minlength="5" maxlength="26">
+                  <label>Réponse 3 :</label>
+                  <input type="text" class="qrep" required id="e2r3q1t1"  size="30" placeholder="Never Gonna" minlength="5" maxlength="26">
+                  <label>Réponse 4 :</label>
+                  <input type="text" class="qrep" required id="e2r4q1t1"  size="30" placeholder="Give You Up" minlength="5" maxlength="26">
+                  <label for="rep">Bonne réponse :</label>
+                  <select required id="e2q1th1rep">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                </td>
+    
+                <td class="q">
+                  <h2>Thème 2 :</h2>
+                  <h2><input type="text" class="qtitle" required id="e2q1th2"  size="30" placeholder="Thème" minlength="5" maxlength="26"></h2>
+                  <input type="text" class="qtitle" required id="e2tq1t2"  size="45" placeholder="Titre de la question" minlength="5" maxlength="42">
+                  <label>Réponse 1 :</label>
+                  <input type="text" class="qrep" required id="e2r1q1t2"  size="30" placeholder="42 ?" minlength="5" maxlength="26">
+                  <label>Réponse 2 :</label>
+                  <input type="text" class="qrep" required id="e2r2q1t2"  size="30" placeholder="La réponse A" minlength="5" maxlength="26">
+                  <label>Réponse 3 :</label>
+                  <input type="text" class="qrep" required id="e2r3q1t2"  size="30" placeholder="Never Gonna" minlength="5" maxlength="26">
+                  <label>Réponse 4 :</label>
+                  <input type="text" class="qrep" required id="e2r4q1t2"  size="30" placeholder="Give You Up" minlength="5" maxlength="26">
+                  <label for="rep">Bonne réponse :</label>
+                  <select required id="e2q1th2rep">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                  </select>
+                </td>
+              </tr>
+          </tbody>
+    
+        </table>
+    </div>
+    
+    <div>
+      <table width="100%">
+        <thead>
+            <tr>
+                <th colspan="2"><h1>Équipe 2 - Question 2 :</h1></th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            <tr>
+              <td class="q">
+                <h2>Thème 1 :</h2>
+                <h2><input type="text" class="qtitle" required id="e2q2th1"  size="30" placeholder="Thème" minlength="5" maxlength="26"></h2>
+                <input type="text" class="qtitle" required id="e2tq2t1"  size="45" placeholder="Titre de la question" minlength="5" maxlength="42">
+                <label>Réponse 1 :</label>
+                <input type="text" class="qrep" required id="e2r1q2t1"  size="30" placeholder="42 ?" minlength="5" maxlength="26">
+                <label>Réponse 2 :</label>
+                <input type="text" class="qrep" required id="e2r2q2t1"  size="30" placeholder="La réponse A" minlength="5" maxlength="26">
+                <label>Réponse 3 :</label>
+                <input type="text" class="qrep" required id="e2r3q2t1"  size="30" placeholder="Never Gonna" minlength="5" maxlength="26">
+                <label>Réponse 4 :</label>
+                <input type="text" class="qrep" required id="e2r4q2t1"  size="30" placeholder="Give You Up" minlength="5" maxlength="26">
+                <label for="rep">Bonne réponse :</label>
+                <select required id="e2q2th1rep">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+              </select>
+              </td>
+    
+              <td class="q">
+                <h2>Thème 2 :</h2>
+                <h2><input type="text" class="qtitle" required id="e2q2th2"  size="30" placeholder="Thème" minlength="5" maxlength="26"></h2>
+                <input type="text" class="qtitle" required id="e2tq2t2"  size="45" placeholder="Titre de la question" minlength="5" maxlength="42">
+                <label>Réponse 1 :</label>
+                <input type="text" class="qrep" required id="e2r1q2t2"  size="30" placeholder="42 ?" minlength="5" maxlength="26">
+                <label>Réponse 2 :</label>
+                <input type="text" class="qrep" required id="e2r2q2t2"  size="30" placeholder="La réponse A" minlength="5" maxlength="26">
+                <label>Réponse 3 :</label>
+                <input type="text" class="qrep" required id="e2r3q2t2"  size="30" placeholder="Never Gonna" minlength="5" maxlength="26">
+                <label>Réponse 4 :</label>
+                <input type="text" class="qrep" required id="e2r4q2t2"  size="30" placeholder="Give You Up" minlength="5" maxlength="26">
+                <label for="rep">Bonne réponse :</label>
+                <select required id="e2q2th2rep">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+              </td>
+            </tr>
+        </tbody>
+    
+      </table>
+    </div>
+    
+    <div>
+      <table width="100%">
+        <thead>
+            <tr>
+                <th colspan="2"><h1> Équipe 2 - Question 3 :</h1></th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            <tr>
+              <td class="q">
+                <h2>Thème 1 :</h2>
+                <h2><input type="text" class="qtitle" required id="e2q3th1"  size="30" placeholder="Thème" minlength="5" maxlength="26"></h2>
+                <input type="text" class="qtitle" required id="e2tq3t1"  size="45" placeholder="Titre de la question" minlength="5" maxlength="42">
+                <label>Réponse 1 :</label>
+                <input type="text" class="qrep" required id="e2r1q3t1"  size="30" placeholder="42 ?" minlength="5" maxlength="26">
+                <label>Réponse 2 :</label>
+                <input type="text" class="qrep" required id="e2r2q3t1"  size="30" placeholder="La réponse A" minlength="5" maxlength="26">
+                <label>Réponse 3 :</label>
+                <input type="text" class="qrep" required id="e2r3q3t1"  size="30" placeholder="Never Gonna" minlength="5" maxlength="26">
+                <label>Réponse 4 :</label>
+                <input type="text" class="qrep" required id="e2r4q3t1"  size="30" placeholder="Give You Up" minlength="5" maxlength="26">
+                <label for="rep">Bonne réponse :</label>
+                <select required id="e2q3th1rep">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+              </select>
+              </td>
+    
+              <td class="q">
+                <h2>Thème 2 :</h2>
+                <h2><input type="text" class="qtitle" required id="e2q3th2"  size="30" placeholder="Thème" minlength="5" maxlength="26"></h2>
+                <input type="text" class="qtitle" required id="e2tq3t2"  size="45" placeholder="Titre de la question" minlength="5" maxlength="42">
+                <label>Réponse 1 :</label>
+                <input type="text" class="qrep" required id="e2r1q3t2"  size="30" placeholder="42 ?" minlength="5" maxlength="26">
+                <label>Réponse 2 :</label>
+                <input type="text" class="qrep" required id="e2r2q3t2"  size="30" placeholder="La réponse A" minlength="5" maxlength="26">
+                <label>Réponse 3 :</label>
+                <input type="text" class="qrep" required id="e2r3q3t2"  size="30" placeholder="Never Gonna" minlength="5" maxlength="26">
+                <label>Réponse 4 :</label>
+                <input type="text" class="qrep" required id="e2r4q3t2"  size="30" placeholder="Give You Up" minlength="5" maxlength="26">
+                <label for="rep">Bonne réponse :</label>
+                <select required id="e2q3th2rep">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+              </td>
+            </tr>
+        </tbody>
+    
+      </table>
+    </div>
+    
+    <div>
+      <table width="100%">
+        <thead>
+            <tr>
+                <th colspan="2"><h1>Équipe 2 - Question 4 :</h1></th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            <tr>
+              <td class="q">
+                <h2>Thème 1 :</h2>
+                <h2><input type="text" class="qtitle" required id="e2q4th1"  size="30" placeholder="Thème" minlength="5" maxlength="26"></h2>
+                <input type="text" class="qtitle" required id="e2tq4t1"  size="45" placeholder="Titre de la question" minlength="5" maxlength="42">
+                <label>Réponse 1 :</label>
+                <input type="text" class="qrep" required id="e2r1q4t1"  size="30" placeholder="42 ?" minlength="5" maxlength="26">
+                <label>Réponse 2 :</label>
+                <input type="text" class="qrep" required id="e2r2q4t1"  size="30" placeholder="La réponse A" minlength="5" maxlength="26">
+                <label>Réponse 3 :</label>
+                <input type="text" class="qrep" required id="e2r3q4t1"  size="30" placeholder="Never Gonna" minlength="5" maxlength="26">
+                <label>Réponse 4 :</label>
+                <input type="text" class="qrep" required id="e2r4q4t1"  size="30" placeholder="Give You Up" minlength="5" maxlength="26">
+                <label for="rep">Bonne réponse :</label>
+                <select required id="e2q4th1rep">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+              </select>
+              </td>
+    
+              <td class="q">
+                <h2>Thème 2 :</h2>
+                <h2><input type="text" class="qtitle" required id="e2q4th2"  size="30" placeholder="Thème" minlength="5" maxlength="26"></h2>
+                <input type="text" class="qtitle" required id="e2tq4t2"  size="45" placeholder="Titre de la question" minlength="5" maxlength="42">
+                <label>Réponse 1 :</label>
+                <input type="text" class="qrep" required id="e2r1q4t2"  size="30" placeholder="42 ?" minlength="5" maxlength="26">
+                <label>Réponse 2 :</label>
+                <input type="text" class="qrep" required id="e2r2q4t2"  size="30" placeholder="La réponse A" minlength="5" maxlength="26">
+                <label>Réponse 3 :</label>
+                <input type="text" class="qrep" required id="e2r3q4t2"  size="30" placeholder="Never Gonna" minlength="5" maxlength="26">
+                <label>Réponse 4 :</label>
+                <input type="text" class="qrep" required id="e2r4q4t2"  size="30" placeholder="Give You Up" minlength="5" maxlength="26">
+                <label for="rep">Bonne réponse :</label>
+                <select required id="e2q4th2rep">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+              </td>
+            </tr>
+        </tbody>
+    
+      </table>
+    </div>
+    </form>
+
+    <center><button type="click" onClick="JavaScript:partyCreate(event)">Créer la partie !</button></center>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="../assets/js/ep.js"></script>
+  </body>
+</html>

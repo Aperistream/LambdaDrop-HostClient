@@ -1,0 +1,119 @@
+@font-face {
+    font-family: 'opensans';
+    src: url('./fonts/Open_Sans.ttf');
+}
+
+body
+{
+    background-image: url("../img/bg.png");
+    background-attachment: fixed;
+    background-position: center;
+    font-family: opensans;
+    font-size: 15px;
+    height: 529px;
+}
+h1 {
+    text-align: center;
+    font-size: 22px;
+}
+#cp{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: rgb(208, 70, 0);
+    font-family: opensans;
+    color: white;
+    font-size: 15px;
+    display: flex;
+    align-items:center;
+}
+#cp:hover{
+    background-color: rgb(218, 94, 32);
+}
+#lp{
+    margin-left: 15px;
+    width: 600px;
+    height: 450px;
+    border-radius: 20px;
+    border-style: none;
+    background-color: rgba(128, 128, 128, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#lp:hover{
+    background-color: rgba(206, 199, 199, 0.479);
+}
+#fp {
+    display: grid;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+}   
+#lft {
+    margin-top: 3px;
+    text-align: right;
+    color: white;
+    font-size: 9px;
+}
+#content {
+    margin-top: 10vh; /* poussé de la moitié de hauteur de viewport */
+}
+
+.dbt {
+    display: grid;
+    background-color: rgb(16, 16, 16);
+    color: white;
+    justify-items: center;
+    border-color: rgb(16, 16, 16);
+    border-radius: 10px;
+    width: 150px;
+    padding: 18px 10px 20px 10px;
+    margin-left: 8px;
+}
+
+.btimg {
+    margin-bottom: 5px;
+    filter: invert(1);
+}
+
+.dbt:hover {
+    background-color: rgb(58, 56, 56);
+    border-color: rgb(58, 56, 56);
+}
+
+.overlay {
+    position: fixed;
+    left: 0px;
+    top:0px;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 0px;
+    background-color: rgba(0,0,0,0.9);
+    width: 100%;
+    height: 100%;
+    z-index:1;
+    display:none;
+}
+
+.popup{
+    margin: 10% auto;
+    width : 70%;
+    background-color: rgb(243, 243, 243);
+    padding: 1em;
+    box-shadow: 0 15px 20px rgba(0,0,0,0.3);
+    border-radius: 5px;
+}
+
+.pbtn {
+    margin: 10px;
+    padding: 8px;
+    background-color: rgb(55, 59, 170);
+    border-color: rgb(55, 59, 170);
+    border-radius: 12px;
+    color: white;
+    width: 80%;
+}

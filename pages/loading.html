@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy unsafe-inline" content="default-src 'self'; script-src 'self'">
+  <link rel="stylesheet" href=../assets/style/loading.css>
+  <title>LambdaDrop Panel - Lancement de la partie...</title>
+</head>
+
+<body>
+
+  <div id="load" class="popup" style="margin: 105px; margin-top: 230px">
+    <div class="loader" id="spinner"></div>
+    <h1 id="loadingtitle">Vérification de la partie en cours...</h1>
+  </div>
+  <span class="back" style="margin: 115px">
+    <div id="over" class="overlay">
+      <div class="popup" style="display: block;">
+        <center><img src="data:image/png;base64,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q5y8nvJ/AmsKcuSmn0+dOPKf7zaPzyWv68kkFmnecfChRZy8HgtnAmsCddb3r//V4letft/AdR2exKf+89Kvn77yWx9gvH4LZwJrCvLcJ+54/4kj/3104LqOTuKTzx/749OPjX+Q8fovvAmsCWrr7ty6f/QVS944cF2HJvGJf70we2j2lZtQr7+c+bjIOeEGDHgXMeMNT9gBA+2Ip/ePvuIMpyOeO8x4QxTeY+BeCs1D1+x8y8mj/3184LqWPiZmvOHiBNYEtXU/m94/usKtScx4w8YJrCk0D/3VrUnMeIkTuFcdtbUTN+wfG19m9SRmvAQw4GiWR8x4SWPAcSyNeO7wMcZLHQw4iWURM17qxYAHqaO2dsMN+8dWVhsx46UoDDiNOmprN0ztH1u5vJKIGS/FYcBp1VFbu35q/9iqciOeO3xs9tCTjJeiMeAsSo6Y8dIgDDirkiJmvJQGA86jjtra10/tH1tdTMSMl9JiwHkVFDHjpSwY8DAMR8x4KSsGPCxDEZ9kvJQDAzZhyIjnDh+b/TvjpRwYsCl11M553eQDC9esuGjgb1UvF+DEcy/87pmnb78EdfDrTigzBmzY2d/fsmPszGU31RaPjSWt1zw+N3fyH8e+8swnf1Av69jIPwy4AK+94+OLTpyqfWlkycIrRhYvXFdbuGAUAJonTp489eLcoeaLJ+4ZW9D8wtPX//B41cdKRERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERV+j9Bw9FGSvEkvQAAAABJRU5ErkJggg==" alt="done-logo" width="64"></center><br><h1 id="loadingtitle" class="done">Partie envoyée au serveur !</h1>
+        <div id="buttons"> 
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <button class="dbt" onclick="JavaScript:menu()">
+                    Retourner au menu
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div> 
+      </div>
+    </div>
+  </span>
+  <!-- You can also require other files to run in this process -->
+  <script src="../assets/js/loading.js"></script>
+</body>
+
+</html>

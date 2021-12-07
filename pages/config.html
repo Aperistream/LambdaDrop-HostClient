@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval';" />
+    <link rel="stylesheet" href=../assets/style/config.css>
+    <title>LambdaDrop Panel - Configuration</title>
+  </head>
+  <body>
+
+    <center><a href="../index.html"><img src="../assets/img/logo.png" alt="logo" width="125"></a></center>
+    <form>
+
+      <div>
+          <table width="100%">
+            <thead>
+                <tr>
+                    <th colspan="2"><h1>Connexion aux serveurs :</h1></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                  <td class="q">
+                    <label>LambdaDrop :</label>
+                    <input type="text" class="qrep" required id="url"  size="30" minlength="5" maxlength="128">
+                  </td>
+                </tr>
+            </tbody>
+
+          </table>
+      </div>
+
+      <div>
+        <table width="100%">
+          <thead>
+              <tr>
+                  <th colspan="2"><h1>Identifiants :</h1></th>
+              </tr>
+          </thead>
+    
+          <tbody>
+              <tr>
+                <td class="q">
+                  <label>Token d'accès :</label>
+                  <input type="text" class="qrep" required id="token"  size="30" minlength="1" maxlength="30">
+                </td>
+              </tr>
+          </tbody>
+    
+        </table>
+      </div>
+
+      <div>
+        <table width="100%">
+          <thead>
+              <tr>
+                  <th colspan="2"><h1> Paramètres de l'application :</h1></th>
+              </tr>
+          </thead>
+    
+          <tbody>
+              <tr>
+                <td class="q">
+                  <h2>Coming Soon !</h2>
+                </td>
+          </tbody>
+    
+        </table>
+      </div>
+
+    <center><button type="click" onClick="JavaScript:saveConfig(event)">Sauvegarder</button></center>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="../assets/js/config.js"></script>
+  </body>
+</html>

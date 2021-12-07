@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'opensans';
+    src: url('./fonts/Open_Sans.ttf');
+}
+
+body
+{
+    background-image: url("../img/bg.png");
+    background-attachment: fixed;
+    background-position: center;
+    font-family: opensans;
+    font-size: 15px;
+}
+h1 {
+    text-align: center;
+}
+#cp{
+    width: 200px;
+    height: 450px;
+    border-radius: 20px;
+    border-style: none;
+    background-color: rgba(128, 128, 128, 0.4);
+    font-family: opensans;
+    font-size: 15px;
+}
+#cp:hover{
+    background-color: rgba(206, 199, 199, 0.479);
+}
+#lp{
+    margin-left: 15px;
+    width: 600px;
+    height: 450px;
+    border-radius: 20px;
+    border-style: none;
+    background-color: rgba(128, 128, 128, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#lp:hover{
+    background-color: rgba(206, 199, 199, 0.479);
+}
+#fp {
+    display: flex;
+}   
+#lft {
+    margin-top: 3px;
+    text-align: right;
+    color: white;
+    font-size: 9px;
+}
