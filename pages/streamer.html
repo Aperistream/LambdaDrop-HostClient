@@ -1,29 +1,89 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval';" />
-    <link rel="stylesheet" href=../assets/style/streamer.css>
-    <title>LambdaDrop Panel - Streamer Manager</title>
-  </head>
-  <body>
 
-    <center><a href="../index.html"><img src="../assets/img/logo.png" alt="logo" width="125"></a></center>
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval';" />
+  <link rel="stylesheet" href=../assets/style/streamer.css>
+  <title>LambdaDrop Panel - Streamer Manager</title>
+</head>
 
-    <div id="infos">
-      ...
-    </div>
+<body>
 
-    <div id="buttons">
-      ...
-    </div>
+  <center><a href="../index.html"><img src="../assets/img/logo.png" alt="logo" width="125"></a></center>
 
-    <div id="render">
-      ...
-    </div>
+  <div id="infos">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="2">Scores :</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Équipe 1 :</td>
+            <td id="st1">...</td>
+          </tr>
+          <tr>
+            <td>Équipe 2 :</td>
+            <td id="st2">...</td>
+          </tr>
+        </tbody>
+      </table>
 
-    <!-- You can also require other files to run in this process -->
-    <script src="../assets/js/streamer.js"></script>
-  </body>
+      <table>
+        <thead>
+          <tr>
+            <th colspan="2">Avancement :</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Question :</td>
+            <td id="qs">0/0</td>
+          </tr>
+          <tr>
+            <td>Playing Team :</td>
+            <td id="tm">...</td>
+          </tr>
+        </tbody>
+      </table>
+      <button id="s" class="dbt" onclick="JavaScript:as()">
+        <img class="btimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAACgUlEQVRoge2ZvWsUQRjGf0mQFJJoFDxtA4KdUQsVv4oUYmOhKJhKUNBGxRjERgU7yZ8QBMtEBUGswlmIlR/4kSKgYOkHGA3xC6PxzmL3dO7Zud3ZvWXXhPnBwM37zjzzvHOze3sseDweT5l0WGL1wl2ko8lzZ1ku8sJWwM/CXbgzrwFbAV8LMJKVLxqwFfBW+hcJzl2jnZH8mOTTtDHROi35S5J/41LAS+lvkf5ny5y80B3WtdWbtYCH0t8m4/SI9TpZs6Nzzc3pBLZLXr1ZC7gn/bXATqM/J/k1MQaTqEjf1N5l0a6qgK2AZ8BriQ0Zn99LLs8CTO0hyb0CplyFLxD8oDXaN/4ZXS25D+5+I3wSrb4wXgG+S+58GuFeYFYEroa5Dov4ygzmVxHdpAajkvsI9KRd4IqIzAMbwtyU5LZmKGCHaDwP4+uBH5K7nEGfPoIzaQpVCb6BGxI/mkH/mGhMhNpVib8DVrQSiXsWmgWGJTYIHAemJT6QwnirOdOh9qDEh4ne+VIxSfOOzAEnJfY4g+5T0TgRapuxyXaMN+gnuMBM4SfS/wUsT6HZAywQ3QS9qPvzKABgRMRtbX8KvQMOenp826KL6A5pu5ZC73qC1qNwzVwZAH7HLDoDdDvodIdjW+ksABtz9v6X2zEL14HDDhpHEjRu5e7aYF/C4vcdNB4kaOzN3bVBJWHxOrA7Zv4eh/ntPBxm4q4YeAEss4zrInr7vVOQx1g2AzWajZ2zjDsrY2rApoI8JnKT5KOhbbwUpy1YR/DI62p+huCf3n/FIaJHydZqwMGSPCZyiuQCRkpz5/EsQWzvB1yp5+YiIJOXJfl+YFGx6AvweDyecvkDliMtkb6ePLoAAAAASUVORK5CYII="/>
+        Afficher Scores
+      </button>
+
+  </div>
+
+  <div id="buttons">
+    <center>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <button class="dbt" onclick="JavaScript:cbrd()">
+                Copier lien OBS
+              </button>
+            </td>
+            <td>
+              <button id="ps" class="psd" onclick="JavaScript:cps()">
+                ...
+              </button>
+            </td>
+            <td>
+              <button id="p" class="dbt" onclick="JavaScript:pp()">
+                Mettre la partie en pause
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>     
+    </center>
+  </div>
+
+  <!-- You can also require other files to run in this process -->
+  <script src="../assets/js/streamer.js"></script>
+</body>
+
 </html>

@@ -23,7 +23,6 @@ try {
 }
 
 party = JSON.parse(party)
-console.log(party)
 
 if (fail !== 1) {
 
@@ -168,6 +167,20 @@ if (fail !== 1) {
     document.getElementById('e2r3q4t2').value = party.team2.q4.th2.rep3
     document.getElementById('e2r4q4t2').value = party.team2.q4.th2.rep4
     document.getElementById('e2q4th2rep').value = party.team2.q4.th2.correp
+
+    // Question Finale Thème 1
+    document.getElementById('qfth1').value = party.finalq.th1.thname
+    document.getElementById('tqft1').value = party.finalq.th1.question
+    document.getElementById('r1qft1').value = party.finalq.th1.rep1
+    document.getElementById('r2qft1').value = party.finalq.th1.rep2
+    document.getElementById('qfth1rep').value = party.finalq.th1.correp
+
+    // Question Finale Thème 2
+    document.getElementById('qfth2').value = party.finalq.th2.thname
+    document.getElementById('tqft2').value = party.finalq.th2.question
+    document.getElementById('r1qft2').value = party.finalq.th2.rep1
+    document.getElementById('r2qft2').value = party.finalq.th2.rep2
+    document.getElementById('qfth2rep').value = party.finalq.th2.correp
 }
 
 function exitApp(){
@@ -186,7 +199,7 @@ function partyCreate(event){
     dialog.showSaveDialog({
         title: 'À quel endroit la partie doit être sauvegardée ?',
         defaultPath: path.join(__dirname, `${os.homedir()}/party.bite`),
-        buttonLabel: 'Créer la partie',
+        buttonLabel: 'Enregistrer la partie',
         filters: [
             {
                 name: 'LambdaDrop Parties',
@@ -358,6 +371,22 @@ function partyCreate(event){
             "rep4": "${document.getElementById('e2r4q4t2').value}",
             "correp": ${document.getElementById('e2q4th2rep').value}
         }
+    }
+},
+"finalq": {
+    "th1": {
+        "thname": "${document.getElementById('qfth1').value}",
+        "question": "${document.getElementById('tqft1').value}",
+        "rep1": "${document.getElementById('r1qft1').value}",
+        "rep2": "${document.getElementById('r2qft1').value}",
+        "correp": ${document.getElementById('qfth1rep').value}
+    },
+    "th2": {
+        "thname": "${document.getElementById('qfth2').value}",
+        "question": "${document.getElementById('tqft2').value}",
+        "rep1": "${document.getElementById('r1qft2').value}",
+        "rep2": "${document.getElementById('r2qft2').value}",
+        "correp": ${document.getElementById('qfth2rep').value}
     }
 }
 }`, function (err) {

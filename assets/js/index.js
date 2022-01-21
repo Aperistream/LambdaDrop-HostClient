@@ -44,6 +44,15 @@ document.getElementById("app").addEventListener('drop', (event) => {
 
 });
 
+function handleKeyPress (event) {
+  if (event.key == "Escape") {
+    document.getElementById('overlay2').style.display ='none';
+    document.getElementById('overlay').style.display ='none';
+  }
+}
+
+window.addEventListener('keyup', handleKeyPress, true)
+
 document.getElementById("app").addEventListener('dragover', (e) => {
   e.preventDefault();
   e.stopPropagation();
@@ -52,7 +61,7 @@ document.getElementById("app").addEventListener('dragover', (e) => {
 document.getElementById("lpt").addEventListener('click', (e) => {
   dialog.showOpenDialog({
     title: 'Où est donc ta partie ?',
-    defaultPath: path.join(__dirname, `${os.homedir()}`),
+    defaultPath: path.join(__dirname),
     buttonLabel: 'Ouvrir la partie',
     filters: [
       {

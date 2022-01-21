@@ -194,6 +194,22 @@ function partyCreate(event) {
             "correp": ${document.getElementById('e2q4th2rep').value}
         }
     }
+},
+"finalq": {
+    "th1": {
+        "thname": "${document.getElementById('qfth1').value}",
+        "question": "${document.getElementById('tqft1').value}",
+        "rep1": "${document.getElementById('r1qft1').value}",
+        "rep2": "${document.getElementById('r2qft1').value}",
+        "correp": ${document.getElementById('qfth1rep').value}
+    },
+    "th2": {
+        "thname": "${document.getElementById('qfth2').value}",
+        "question": "${document.getElementById('tqft2').value}",
+        "rep1": "${document.getElementById('r1qft2').value}",
+        "rep2": "${document.getElementById('r2qft2').value}",
+        "correp": ${document.getElementById('qfth2rep').value}
+    }
 }
 }`, function (err) {
                 if (err) {

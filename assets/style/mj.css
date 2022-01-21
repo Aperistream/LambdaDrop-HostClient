@@ -10,4 +10,157 @@ body
     background-position: center;
     font-family: opensans;
     font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+div {
+    margin-left: 5px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    display: inline-flex;
+    border-radius: 20px;
+    border-style: none;
+    background-color: rgba(128, 128, 128, 0.4);
+    width: 100%;
+}
+
+#infos {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+#infos table {
+    margin: 10px auto 8px 40px;
+}
+
+#buttons {
+    display: block;
+}
+
+#buttons button {
+    margin-left: 8px;
+    margin-top: 10px;
+}
+
+#game table {
+    margin-top: 10px;
+    width: 95%;
+    padding-left: 35px;
+}
+
+#game tbody tr td {
+    height: 85px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: top;
+}
+
+#game button {
+    background-color: rgb(16, 16, 16);
+    color: white;
+    justify-items: center;
+    border-color: transparent;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+#game button:hover {
+    background-color: rgb(58, 56, 56);
+}
+
+#game button:disabled {
+    background-color: gray;
+}
+
+#game button:disabled:hover {
+    background-color: gray;
+}
+
+
+.dbt {
+    display: grid;
+    background-color: rgb(16, 16, 16);
+    color: white;
+    justify-items: center;
+    border-color: transparent;
+    border-radius: 10px;
+    padding: 9px 5px 10px 5px;
+}
+
+.btimg {
+    margin-bottom: 5px;
+    filter: invert(1);
+    width: 50%;
+    height: auto;
+}
+
+.dbt:hover {
+    background-color: rgb(58, 56, 56);
+}
+
+.psd {
+    display: grid;
+    background-color: red;
+    border-color: transparent;
+    color: white;
+    justify-items: center;
+    border-radius: 10px;
+    padding: 18px;
+    margin-left: 8px;
+    margin-top: 10px;
+}
+
+.psd:hover {
+    background-color: rgb(255, 71, 71);
+}
+
+.pse {
+    display: grid;
+    background-color: green;
+    border-color: transparent;
+    color: white;
+    justify-items: center;
+    border-radius: 10px;
+    padding: 18px;
+    margin-left: 8px;
+    margin-top: 10px;
+}
+
+.pse:hover {
+    background-color: rgb(65, 190, 65);
+}
+
+.psp {
+    display: grid;
+    background-color: orange;
+    border-color: transparent;
+    color: white;
+    justify-items: center;
+    border-radius: 10px;
+    padding: 18px;
+    margin-left: 8px;
+    margin-top: 10px;
+}
+
+.psp:hover {
+    background-color: rgb(241, 182, 72);
+}
+
+button:disabled {
+    background-color: gray;
+}
+button:disabled:hover {
+    background-color: gray;
+}
+
+.ambtn {
+    width: 30px;
+}
+
+.ctbtn {
+    width: 300px;
 }

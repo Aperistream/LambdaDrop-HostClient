@@ -10,7 +10,155 @@
   <body>
 
     <center><a href="../index.html"><img src="../assets/img/logo.png" alt="logo" width="125"></a></center>
+  
+    <div id="infos">
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2">Scores :</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Équipe 1 :</td>
+              <td id="st1">...</td>
+            </tr>
+            <tr>
+              <td>Équipe 2 :</td>
+              <td id="st2">...</td>
+            </tr>
+          </tbody>
+        </table>
+  
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2">Avancement :</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Question :</td>
+              <td id="qs">0/0</td>
+            </tr>
+            <tr>
+              <td>Playing Team :</td>
+              <td id="tm">...</td>
+            </tr>
+          </tbody>
+        </table>
 
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2">
+                <center><button id="gr" class="dbt" onclick="JavaScript:sr()">
+                  Donner les réponses
+                </button></center>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <button id="qp" class="dbt" onclick="JavaScript:qp()">
+                  Question Précédente
+                </button>
+              </td>
+              <td>
+                <button id="qsuiv" class="dbt" onclick="JavaScript:qsuiv()">
+                  Question Suivante
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+  
+    </div>
+  
+    <div id="buttons">
+      <center>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <button id="s" class="dbt" onclick="JavaScript:as()">
+                  Afficher les scores
+                </button>
+              </td>
+              <td>
+                <button id="ps" class="psd" onclick="JavaScript:cps()">
+                  ...
+                </button>
+              </td>
+              <td>
+                <button id="p" class="dbt" onclick="JavaScript:pp()">
+                  Mettre la partie en pause
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>     
+      </center>
+    </div>
+
+    <div id="game">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="4">
+              Theme choisi :
+              <span id="th">...</span>
+              <p>Question : <span id="q">...</span></p>
+              <button disabled id="th1" class="ctbtn" onclick="JavaScript:thcd(1)">TH1</button>
+              <button disabled id="th2" class="ctbtn" onclick="JavaScript:thcd(2)">TH2</button>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <button class="ambtn" onclick="JavaScript:cp(1,1)">-</button>
+              <button id="rm1">000</button>
+              <button class="ambtn" onclick="JavaScript:cp(2,1)">+</button>
+              <br>
+              Réponse 1 :
+              <br>
+              <span id="r1">...</span>
+            </td>
+            <td>
+              <button class="ambtn" onclick="JavaScript:cp(1,2)">-</button>
+              <button id="rm2">000</button>
+              <button class="ambtn" onclick="JavaScript:cp(2,2)">+</button>
+              <br>
+              Réponse 2 :
+              <br>
+              <span id="r2">...</span>
+            </td>
+            <td>
+              <button class="ambtn" onclick="JavaScript:cp(1,3)">-</button>
+              <button id="rm3">000</button>
+              <button class="ambtn" onclick="JavaScript:cp(2,3)">+</button>
+              <br>
+              Réponse 3 :
+              <br>
+              <span id="r3">...</span>
+            </td>
+            <td>
+              <button class="ambtn" onclick="JavaScript:cp(1,4)">-</button>
+              <button id="rm4">000</button>
+              <button class="ambtn" onclick="JavaScript:cp(2,4)">+</button>
+              <br>
+              Réponse 4 :
+              <br>
+              <span id="r4">...</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+  </div>
+  
     <!-- You can also require other files to run in this process -->
     <script src="../assets/js/mj.js"></script>
   </body>
